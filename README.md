@@ -12,6 +12,7 @@ The sample was selected across route-size and time-window-density groups (random
 - Mean elapsed time saved versus historical routes was 10.89 minutes for the travel objective and 16.96 minutes for the elapsed objective.
 - On the 446 paired routes, the elapsed objective changed elapsed time by a mean of -6.07 minutes and a median of +1.30 minutes relative to the travel objective. Negative means elapsed finished sooner. A small number of large waiting-time reductions pull the mean down; the median describes the typical route more closely.
 - The remaining 54 routes had no feasible result recorded under either objective within the configured solver limits. A timeout or solver failure does not prove infeasibility.
+- One checkpoint record reports a 15-second fallback timeout after only 0.13 seconds. This runtime inconsistency has not been independently reproduced, so that record should be treated cautiously.
 
 ### Figures
 
