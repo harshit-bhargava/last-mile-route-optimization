@@ -1,0 +1,32 @@
+# Python environment and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Do not publish the raw challenge dataset
+/data/raw/*
+!/data/raw/amazon/
+/data/raw/amazon/*
+!/data/raw/amazon/Readme.txt
+!/data/raw/amazon/License.txt
+
+# Keep only selected final 500-route artifacts; ignore caches and interim runs
+/data/processed/*
+!/data/processed/
+!/data/processed/evaluation_routes_500.csv
+!/data/processed/optimization_500_final_objective_summary.csv
+!/data/processed/optimization_500_final_outcomes.csv
+!/data/processed/optimization_500_paired_comparison.csv
+!/data/processed/optimization_500_strata_solve_rates.csv
+!/data/processed/optimization_500_unresolved_by_group.csv
+!/data/processed/github_figures/
+/data/processed/github_figures/*
+!/data/processed/github_figures/*.png
