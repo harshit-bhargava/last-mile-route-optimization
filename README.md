@@ -11,7 +11,7 @@ The sample was selected across route-size and time-window-density groups (random
 - The travel objective reduced driving time by a mean of 10.14% (median 9.22%) versus historical routes. The elapsed objective reduced driving time by a mean of 7.70% (median 7.13%).
 - Mean elapsed time saved versus historical routes was 10.89 minutes for the travel objective and 16.96 minutes for the elapsed objective.
 - On the 446 paired routes, the elapsed objective changed elapsed time by a mean of -6.07 minutes and a median of +1.30 minutes relative to the travel objective. Negative means elapsed finished sooner. A small number of large waiting-time reductions pull the mean down; the median describes the typical route more closely.
-- The remaining 54 routes had no feasible result recorded under either objective within the configured solver limits. A timeout or solver failure does not prove infeasibility.
+- The remaining 54 routes were infeasible under the tested solver configurations and time limits. Their timeout or failure statuses do not establish that no feasible route order exists under any possible solver configuration.
 - One checkpoint record reports a 15-second fallback timeout after only 0.13 seconds. This runtime inconsistency has not been independently reproduced, so that record should be treated cautiously.
 
 ### Figures
@@ -35,7 +35,7 @@ The sample was selected across route-size and time-window-density groups (random
 - `data/processed/optimization_500_unresolved_by_group.csv` — unresolved counts by group.
 - `data/processed/github_figures/` — generated figures.
 
-Raw challenge data, per-route caches, temporary checkpoints, and the local Python environment are excluded from this repository. Obtain the source data under its applicable terms and place it in the expected `data/raw/amazon/` location before running notebooks 01 and 02. Those notebooks currently use local file paths that may need to be updated for another computer.
+Raw challenge data, per-route caches, temporary checkpoints, and the local Python environment are excluded from this repository. Obtain and extract the source data under its applicable terms into `data/raw/amazon/almrrc2021-data-training/model_build_inputs/`. Notebooks 01 and 02 find the project folder automatically when Jupyter starts from the project folder or its `notebooks/` folder, and show a clear error if the source data is missing.
 
 ## Reproduce the 500-route report
 
