@@ -25,6 +25,7 @@ The sample was selected across route-size and time-window-density groups (random
 
 - `notebooks/01_dataset_audit.ipynb` — data checks and sample preparation.
 - `notebooks/02_route_optimization.ipynb` — route optimization and result analysis.
+- `notebooks/03_reproduce_500_route_report.ipynb` — rebuilds the 500-route summary tables and charts from the committed results.
 - `data/processed/evaluation_routes_500.csv` — 500-route sample metadata.
 - `data/processed/optimization_500_final_outcomes.csv` — final per-route, per-objective results.
 - `data/processed/optimization_500_final_objective_summary.csv` — objective-level summary.
@@ -33,7 +34,29 @@ The sample was selected across route-size and time-window-density groups (random
 - `data/processed/optimization_500_unresolved_by_group.csv` — unresolved counts by group.
 - `data/processed/github_figures/` — generated figures.
 
-Raw challenge data, per-route caches, temporary checkpoints, and the local Python environment are excluded from this repository. Obtain the source data under its applicable terms and place it in the expected `data/raw/amazon/` location before running the notebooks. The notebooks currently use local file paths that may need to be updated for another computer.
+Raw challenge data, per-route caches, temporary checkpoints, and the local Python environment are excluded from this repository. Obtain the source data under its applicable terms and place it in the expected `data/raw/amazon/` location before running notebooks 01 and 02. Those notebooks currently use local file paths that may need to be updated for another computer.
+
+## Reproduce the 500-route report
+
+Notebook 03 uses the committed 500-route CSV files. It does not rerun the optimizer.
+
+1. Clone this repository and open a terminal in the project folder.
+2. Install the dependencies and Jupyter Notebook:
+
+   ```bash
+   python3 -m pip install -r requirements.txt
+   python3 -m pip install notebook
+   ```
+
+3. Start Jupyter from the project folder:
+
+   ```bash
+   python3 -m notebook
+   ```
+
+4. Open `notebooks/03_reproduce_500_route_report.ipynb` and run the cells from top to bottom.
+
+The notebook displays the summary tables and saves the charts to `data/processed/github_figures/`. Rerunning it will recreate those chart files on your computer.
 
 ## Methods and limitations
 
